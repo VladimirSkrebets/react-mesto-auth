@@ -1,0 +1,7 @@
+.cards__wrapper {
+  max-width: calc(100% - 20px *2);
+  padding: 22px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

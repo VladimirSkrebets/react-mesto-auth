@@ -1,0 +1,11 @@
+.profile__wrapper {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .profile__wrapper {
+    gap: 10px;
+  }
+}

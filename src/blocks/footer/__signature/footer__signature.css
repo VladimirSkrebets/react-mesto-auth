@@ -1,0 +1,16 @@
+.footer__signature {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #545454;
+  padding: 0;
+  margin: 66px 0 60px;
+}
+
+@media (max-width: 768px) {
+  .footer__signature {
+    font-size: 14px;
+    line-height: 1.21;
+    margin: 48px 0 36px;
+  }
+}

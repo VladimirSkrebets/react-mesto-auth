@@ -1,0 +1,10 @@
+.cards {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media (max-width: 936px) {
+  .cards {
+    width: calc(100% - (19px * 2));
+  }
+}
