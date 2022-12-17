@@ -38,15 +38,17 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getDownloadedCards()])
-      .then(([userData, cards]) => {
-        setCurrentUser(userData);
-        setCards(cards);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    if (loggedIn) {
+      Promise.all([api.getUserInfo(), api.getDownloadedCards()])
+        .then(([userData, cards]) => {
+          setCurrentUser(userData);
+          setCards(cards);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [loggedIn]);
 
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(!isEditProfilePopupOpen);
@@ -153,7 +155,11 @@ function App() {
           history.push("/");
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setTooltipStatus(false);
+        setIsInfoToolTipOpen(true);
+        console.log(err);
+      });
   }
 
   function handleRegister(email, password) {
