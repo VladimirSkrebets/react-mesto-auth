@@ -1,0 +1,11 @@
+.popup__result-title {
+  max-width: 358px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #000;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
